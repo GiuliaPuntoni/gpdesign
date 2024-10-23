@@ -3,7 +3,8 @@
   "version": "1.0.2-beta.5",
   "description": "",
   "private": false,
-  "main": "lib/index.js",
+  "main": "dist/gpdesign.umd.js",
+  "module": "dist/gpdesign.es.js",
   "files": [
     "dist/"
   ],
