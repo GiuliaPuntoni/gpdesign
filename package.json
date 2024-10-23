@@ -5,12 +5,13 @@
   "private": false,
   "main": "dist/gpdesign.umd.js",
   "module": "dist/gpdesign.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish:patch": "npm run build && npm version patch && npm publish",
