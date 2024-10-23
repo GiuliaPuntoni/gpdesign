@@ -24,28 +24,6 @@ interface TextProps {
   [key: string]: any; // Per gestire altri prop dinamici
 }
 
-const createContainers = (tagsArray: Tag[], style: any) => {
-  const array: { name: string; container: any }[] = [];
-  tagsArray.forEach((element) => {
-    const container = styled[element]`
-      ${style}
-    `;
-    const name = `Container_${element}`;
-    array.push({ name, container });
-  });
-  return array;
-};
-
-const generateWrapper = (
-  containers: { name: string; container: any }[],
-  tag: Tag
-) => {
-  const index = containers.findIndex((el) => el.name === `Container_${tag}`);
-  const ContainerWrapper =
-    index === -1 ? containers[2].container : containers[index].container;
-  return ContainerWrapper;
-};
-
 const TT_TAG: Tag[] = [
   "a",
   "p",
@@ -61,6 +39,91 @@ const TT_TAG: Tag[] = [
   "li",
 ];
 
+const createContainers = (tagsArray: Tag[], style: any) => {
+  const array: { name: string; container: any }[] = [];
+  tagsArray.forEach((element) => {
+    let container = styled.p`
+      ${style}
+    `;
+    console.log("element", element);
+    const name = `Container_${element}`;
+    switch (element) {
+      case "a":
+        container = styled.a`
+          ${style}
+        `;
+        break;
+      case "p":
+        container = styled.p`
+          ${style}
+        `;
+        break;
+      case "span":
+        container = styled.span`
+          ${style}
+        `;
+        break;
+      case "label":
+        container = styled.label`
+          ${style}
+        `;
+        break;
+      case "h1":
+        container = styled.h1`
+          ${style}
+        `;
+        break;
+      case "h2":
+        container = styled.h2`
+          ${style}
+        `;
+        break;
+      case "h3":
+        container = styled.h3`
+          ${style}
+        `;
+        break;
+      case "h4":
+        container = styled.h4`
+          ${style}
+        `;
+        break;
+      case "h5":
+        container = styled.h5`
+          ${style}
+        `;
+        break;
+      case "strong":
+        container = styled.strong`
+          ${style}
+        `;
+        break;
+      case "q":
+        container = styled.q`
+          ${style}
+        `;
+        break;
+      case "li":
+        container = styled.li`
+          ${style}
+        `;
+        break;
+    }
+    array.push({ name, container });
+  });
+  return array;
+};
+
+const generateWrapper = (
+  containers: { name: string; container: any }[],
+  tag: Tag
+) => {
+  const index = containers.findIndex((el) => el.name === `Container_${tag}`);
+  const ContainerWrapper =
+    index === -1 ? containers[2].container : containers[index].container;
+  return ContainerWrapper;
+};
+
 const createMarkup = (html: string) => {
   return { __html: html };
 };
@@ -71,7 +134,7 @@ const Text = forwardRef<HTMLDivElement, TextProps>((props, ref) => {
   const {
     children,
     className = "",
-    tag = "span",
+    tag = "p",
     fontWeight = "400",
     fontStyle,
     textDecoration,
