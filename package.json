@@ -1,6 +1,6 @@
 {
   "name": "gpdesign",
-  "version": "1.0.2-beta.5",
+  "version": "1.0.2-beta.6",
   "description": "",
   "private": false,
   "main": "dist/gpdesign.umd.js",
