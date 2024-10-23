@@ -5,7 +5,7 @@
   "private": false,
   "main": "lib/index.js",
   "files": [
-    "dist"
+    "dist/"
   ],
   "scripts": {
     "dev": "vite",
