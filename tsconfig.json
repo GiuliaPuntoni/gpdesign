@@ -19,10 +19,7 @@
     "sourceMap": true,
     "sourceRoot": "./src"
   },
-  "include": [
-    "src/**/*",
-    "gpdesign.d.ts" // Assicurati che il file di dichiarazione di tipo sia incluso
-  ],
+  "include": ["src/**/*"],
 
   "exclude": ["node_modules", "**/*.stories.tsx"]
 }

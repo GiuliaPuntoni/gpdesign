@@ -1,75 +1,54 @@
 import { css, CSSProp } from "styled-components";
-
-const VIEWPORT_SIZE = {
-  xs: "576px",
-  s: "768px",
-  m: "960px",
-  l: "1024px",
-  xl: "1200px",
-  xxl: "1440px",
-};
-
-interface TextStyleProps {
-  tag?: string;
-  fontFamily?: string;
-  fontWeight?: string | number;
-  fontStyle?: string;
-  textDecoration?: string;
-  fontSize?: string;
-  lineHeight?: string;
-  color?: string;
-  textAlign?: string;
-  textTransform?: string;
-  marginBottom?: string;
-}
+import { styleForViewport } from "../../helpers/css.helpers";
+import { camelToDashCase, propsToArray } from "../../helpers/generic.helpers";
+import { TextStyleProps } from "../../types/components.types";
 
 const LinkStyle = (props: TextStyleProps): CSSProp => {
   return css`
     a {
       cursor: pointer;
-      text-decoration: none;
+
       &:hover {
-        color: #eee520;
-        text-decoration: none;
+        color: #5e5e5e;
+        text-decoration: ${props.textDecoration || "underline"};
       }
       &:active,
       &:focus,
       &:focus-within {
-        color: #eee520;
+        color: #5e5e5e;
       }
     }
     ${props.tag === "a" &&
     css`
       cursor: pointer;
-      text-decoration: none;
+
       &:hover {
-        color: #eee520;
+        color: #5e5e5e;
+        text-decoration: ${props.textDecoration || "underline"};
       }
       &:active,
       &:focus,
       &:focus-within {
-        color: #eee520;
+        color: #5e5e5e;
       }
     `}
   `;
 };
 
 export const getTextStyle = (props: TextStyleProps): CSSProp => {
+  const propArray = propsToArray(props);
   return css`
-    box-sizing: border-box;
-    font-family: ${props.fontFamily};
-    margin: 0;
-    padding: 0;
-    letter-spacing: 0.04em;
+    font-family: ${props.fontFamily || "Helvetica, Arial, sans-serif"};
+    margin: ${props.margin || 0};
+    padding: ${props.padding || 0};
     font-weight: ${props.fontWeight || 400};
     font-style: ${props.fontStyle};
     text-decoration: ${props.textDecoration || "none"};
     font-size: ${props.fontSize || "16px"};
     line-height: ${props.lineHeight || "1.2"};
-    color: ${props.color || "#2f3888"};
+    color: ${props.color || "#1D1D1D"};
     text-align: ${props.textAlign || "left"};
     text-transform: ${props.textTransform};
-    margin-bottom: ${props.marginBottom};
 
     b,
     strong {
@@ -77,5 +56,6 @@ export const getTextStyle = (props: TextStyleProps): CSSProp => {
     }
 
     ${LinkStyle(props)}
+    ${propArray.map((el) => styleForViewport(props, camelToDashCase(el), el))}
   `;
 };
