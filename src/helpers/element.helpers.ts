@@ -11,7 +11,6 @@ export const createContainers = (tagsArray: Tag[], style: any) => {
     let container = styled.div`
       ${style}
     `;
-    console.log("element", element);
     const name = `Container_${element}`;
     switch (element) {
       case "a":

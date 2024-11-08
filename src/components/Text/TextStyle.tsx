@@ -2,6 +2,7 @@ import { css, CSSProp } from "styled-components";
 import { styleForViewport } from "../../helpers/css.helpers";
 import { camelToDashCase, propsToArray } from "../../helpers/generic.helpers";
 import { TextStyleProps } from "../../types/components.types";
+import { COLORS } from "../../constants/Colors.const";
 
 const LinkStyle = (props: TextStyleProps): CSSProp => {
   return css`
@@ -46,7 +47,7 @@ export const getTextStyle = (props: TextStyleProps): CSSProp => {
     text-decoration: ${props.textDecoration || "none"};
     font-size: ${props.fontSize || "16px"};
     line-height: ${props.lineHeight || "1.2"};
-    color: ${props.color || "#1D1D1D"};
+    color: ${props.color || COLORS.textBlack};
     text-align: ${props.textAlign || "left"};
     text-transform: ${props.textTransform};
 

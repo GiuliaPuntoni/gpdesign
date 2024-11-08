@@ -1,3 +1,8 @@
+import {
+  DetailedHTMLProps,
+  LabelHTMLAttributes,
+  TextareaHTMLAttributes,
+} from "react";
 import { INPUT_TYPES } from "./../constants/generic.const";
 import { Tag, ViewportObj } from "./types";
 
@@ -52,7 +57,7 @@ export interface FlexStyleProps {
   backgroundImage?: string;
 }
 
-export interface TextInputProps {
+export interface InputProps {
   name?: string;
   value?: string;
   children?: React.ReactNode;
@@ -62,17 +67,41 @@ export interface TextInputProps {
   ) => void;
   className?: string;
   id: string; // Richiesto
-  type: string; // Richiesto
+  type?: string;
   width?: string;
   iconLeft?: string;
   iconRight?: string;
-  autoComplete?: string;
-  noLabel?: boolean;
+  autoComplete?: boolean;
   textAreaValueLimit?: string;
+  label?: string;
   maskChar?: string;
   mask?: string;
   maxLength?: string;
-  handleRightIconClick?: () => void;
+  rows?: string;
 }
 
-export interface TextInputStyleProps {}
+export interface TextInputStyleProps {
+  disabled?: boolean;
+}
+
+export interface TextInputContainerProps {
+  disabled?: boolean;
+  width?: string;
+}
+
+export interface CounterProps {
+  disabled?: boolean;
+}
+
+export interface TextAreaProps {
+  rows?: string;
+}
+
+export interface TextInputContainerProps {
+  width?: string;
+}
+
+export interface PasswordInputProps {
+  className?: string;
+  [key: string]: any;
+}
