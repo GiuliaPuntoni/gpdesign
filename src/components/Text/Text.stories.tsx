@@ -6,6 +6,9 @@ const meta: Meta<typeof Text> = {
   title: "Components/Text",
   component: Text,
 };
+const mioTema = {
+  text: "red",
+};
 
 export default meta;
 
@@ -16,7 +19,8 @@ const Template: StoryFn<TextProps> = (args) => <Text {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: "This is a default text example.",
-  desktop: {
+  themeColors: mioTema,
+  $desktop: {
     fontSize: "20px",
   },
 };

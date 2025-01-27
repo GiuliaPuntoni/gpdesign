@@ -9,6 +9,7 @@ import {
 import { TEXT_TAG } from "../../constants/generic.const";
 import GlobalStylesWrapper from "../../config/global.styles";
 import { TextProps } from "../../types/components.types";
+import { colorThemePaletteCreate } from "../../helpers/generic.helpers";
 
 const Containers = createContainers(TEXT_TAG, getTextStyle);
 
@@ -29,12 +30,15 @@ const Text = forwardRef<HTMLDivElement, TextProps>((props, ref) => {
     fontFamily,
     margin,
     padding,
-    tablet,
-    desktop,
+    $tablet,
+    $desktop,
+    themeColors,
     ...otherProps
   } = props;
 
   const Container = generateWrapper(Containers, tag);
+
+  const ACTUAL_COLORS = colorThemePaletteCreate(themeColors);
 
   if (typeof children !== "string" || noParsed) {
     return (
@@ -54,8 +58,9 @@ const Text = forwardRef<HTMLDivElement, TextProps>((props, ref) => {
           fontFamily={fontFamily}
           margin={margin}
           padding={padding}
-          tablet={tablet}
-          desktop={desktop}
+          $tablet={$tablet}
+          $desktop={$desktop}
+          $actualColors={ACTUAL_COLORS}
           {...otherProps}
         >
           {children}
@@ -93,8 +98,9 @@ const Text = forwardRef<HTMLDivElement, TextProps>((props, ref) => {
         fontFamily={fontFamily}
         margin={margin}
         padding={padding}
-        tablet={tablet}
-        desktop={desktop}
+        $tablet={$tablet}
+        $desktop={$desktop}
+        $actualColors={ACTUAL_COLORS}
         {...otherProps}
       />
     </GlobalStylesWrapper>

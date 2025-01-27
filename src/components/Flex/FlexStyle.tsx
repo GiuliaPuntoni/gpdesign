@@ -11,8 +11,8 @@ export const getFlexStyle = (props: FlexStyleProps): CSSProp => {
   const propArray = propsToArray(props);
   return css`
     display: ${props.display || "flex"};
-    background-image: url(${props.backgroundImage});
-    ${styleForViewportBackground(props, "background-image", "backgroundImage")}
+    background-image: url(${props.$backgroundImage});
+    ${styleForViewportBackground(props, "background-image", "$backgroundImage")}
     ${cssStyle(propArray, props)}
     ${propArray.map((el) => styleForViewport(props, camelToDashCase(el), el))}
   `;

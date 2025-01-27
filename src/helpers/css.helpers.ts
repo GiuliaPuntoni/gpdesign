@@ -9,9 +9,9 @@ export const cssStyle = (propsArray: string[], props: Record<string, any>) => {
     "children",
     "tag",
     "target",
-    "desktop",
-    "tablet",
-    "backgroundImage",
+    "$desktop",
+    "$tablet",
+    "$backgroundImage",
   ];
   return propsArray.map((el: string) => {
     if (excludeList.includes(el)) {

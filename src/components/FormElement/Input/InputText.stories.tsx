@@ -9,16 +9,24 @@ const meta: Meta<typeof Input> = {
 };
 
 export default meta;
-
 type TextInputProps = React.ComponentProps<typeof Input>;
 
-const Template: StoryFn<TextInputProps> = (args) => (
-  <Flex direction="row" width="650px" gap="20px">
-    <Input {...args} />
-    <Input {...args} />
-    <Input {...args} />
-  </Flex>
-);
+const Template: StoryFn<TextInputProps> = (args) => {
+  return (
+    <Flex $flexDirection="row" width="650px" $gap="20px">
+      <Input {...args} id="pippo">
+        {" "}
+        pippo{" "}
+      </Input>
+      <Input {...args} />
+      <Input {...args} />
+    </Flex>
+  );
+};
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  $themeColors: {
+    focus: "red",
+  },
+};

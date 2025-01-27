@@ -15,9 +15,9 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
     children,
     className = "",
     tag = "div",
-    backgroundImage,
-    tablet,
-    desktop,
+    $backgroundImage,
+    $tablet,
+    $desktop,
     ...otherProps
   } = props;
 
@@ -28,9 +28,9 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
       <Container
         className={`flex-element ${className}`}
         ref={ref}
-        backgroundImage={backgroundImage}
-        tablet={tablet}
-        desktop={desktop}
+        $backgroundImage={$backgroundImage}
+        $tablet={$tablet}
+        $desktop={$desktop}
         {...otherProps}
       >
         {children}

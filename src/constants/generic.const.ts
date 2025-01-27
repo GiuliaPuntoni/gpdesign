@@ -1,8 +1,8 @@
 import { Tag } from "../types/types";
 
 export const VIEWPORT_ARRAY: { key: string; value: string }[] = [
-  { key: "tablet", value: "768px" },
-  { key: "desktop", value: "1200px" },
+  { key: "$tablet", value: "768px" },
+  { key: "$desktop", value: "1200px" },
 ];
 
 export const TEXT_TAG: Tag[] = [
@@ -32,12 +32,15 @@ export const TAGS: Tag[] = [
   "section",
 ];
 
-export const INPUT_TYPES = {
-  checkbox: "checkbox",
-  radio: "radio",
+export const INPUT_TEXT_TYPES = {
   text: "text",
   textarea: "textarea",
   masked: "masked",
   password: "password",
   number: "number",
+};
+
+export const INPUT_TYPES = {
+  checkbox: "checkbox",
+  radio: "radio",
 };
