@@ -633,7 +633,7 @@ React keys must be passed directly to JSX without using spread:
   }()), ar;
 }
 process.env.NODE_ENV === "production" ? Br.exports = Ya() : Br.exports = Xa();
-var he = Br.exports, Ce = function() {
+var pe = Br.exports, Ce = function() {
   return Ce = Object.assign || function(d) {
     for (var i, n = 1, _ = arguments.length; n < _; n++) {
       i = arguments[n];
@@ -658,7 +658,7 @@ var Za = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|def
     return Za.test(r) || r.charCodeAt(0) === 111 && r.charCodeAt(1) === 110 && r.charCodeAt(2) < 91;
   }
   /* Z+1 */
-), pe = "-ms-", ur = "-moz-", le = "-webkit-", Un = "comm", wr = "rule", en = "decl", Ja = "@import", Wn = "@keyframes", Qa = "@layer", qn = Math.abs, rn = String.fromCharCode, Hr = Object.assign;
+), he = "-ms-", ur = "-moz-", le = "-webkit-", Un = "comm", wr = "rule", en = "decl", Ja = "@import", Wn = "@keyframes", Qa = "@layer", qn = Math.abs, rn = String.fromCharCode, Hr = Object.assign;
 function et(r, d) {
   return ke(r, 0) ^ 45 ? (((d << 2 ^ ke(r, 0)) << 2 ^ ke(r, 1)) << 2 ^ ke(r, 2)) << 2 ^ ke(r, 3) : 0;
 }
@@ -948,34 +948,34 @@ function Kn(r, d, i) {
     case 4810:
     case 6968:
     case 2756:
-      return le + r + ur + r + pe + r + r;
+      return le + r + ur + r + he + r + r;
     case 5936:
       switch (ke(r, d + 11)) {
         case 114:
-          return le + r + pe + te(r, /[svh]\w+-[tblr]{2}/, "tb") + r;
+          return le + r + he + te(r, /[svh]\w+-[tblr]{2}/, "tb") + r;
         case 108:
-          return le + r + pe + te(r, /[svh]\w+-[tblr]{2}/, "tb-rl") + r;
+          return le + r + he + te(r, /[svh]\w+-[tblr]{2}/, "tb-rl") + r;
         case 45:
-          return le + r + pe + te(r, /[svh]\w+-[tblr]{2}/, "lr") + r;
+          return le + r + he + te(r, /[svh]\w+-[tblr]{2}/, "lr") + r;
       }
     case 6828:
     case 4268:
     case 2903:
-      return le + r + pe + r + r;
+      return le + r + he + r + r;
     case 6165:
-      return le + r + pe + "flex-" + r + r;
+      return le + r + he + "flex-" + r + r;
     case 5187:
-      return le + r + te(r, /(\w+).+(:[^]+)/, le + "box-$1$2" + pe + "flex-$1$2") + r;
+      return le + r + te(r, /(\w+).+(:[^]+)/, le + "box-$1$2" + he + "flex-$1$2") + r;
     case 5443:
-      return le + r + pe + "flex-item-" + te(r, /flex-|-self/g, "") + (ze(r, /flex-|baseline/) ? "" : pe + "grid-row-" + te(r, /flex-|-self/g, "")) + r;
+      return le + r + he + "flex-item-" + te(r, /flex-|-self/g, "") + (ze(r, /flex-|baseline/) ? "" : he + "grid-row-" + te(r, /flex-|-self/g, "")) + r;
     case 4675:
-      return le + r + pe + "flex-line-pack" + te(r, /align-content|flex-|-self/g, "") + r;
+      return le + r + he + "flex-line-pack" + te(r, /align-content|flex-|-self/g, "") + r;
     case 5548:
-      return le + r + pe + te(r, "shrink", "negative") + r;
+      return le + r + he + te(r, "shrink", "negative") + r;
     case 5292:
-      return le + r + pe + te(r, "basis", "preferred-size") + r;
+      return le + r + he + te(r, "basis", "preferred-size") + r;
     case 6060:
-      return le + "box-" + te(r, "-grow", "") + le + r + pe + te(r, "grow", "positive") + r;
+      return le + "box-" + te(r, "-grow", "") + le + r + he + te(r, "grow", "positive") + r;
     case 4554:
       return le + te(r, /([^-])(transform)/g, "$1" + le + "$2") + r;
     case 6187:
@@ -984,23 +984,23 @@ function Kn(r, d, i) {
     case 3959:
       return te(r, /(image-set\([^]*)/, le + "$1$`$1");
     case 4968:
-      return te(te(r, /(.+:)(flex-)?(.*)/, le + "box-pack:$3" + pe + "flex-pack:$3"), /s.+-b[^;]+/, "justify") + le + r + r;
+      return te(te(r, /(.+:)(flex-)?(.*)/, le + "box-pack:$3" + he + "flex-pack:$3"), /s.+-b[^;]+/, "justify") + le + r + r;
     case 4200:
-      if (!ze(r, /flex-|baseline/)) return pe + "grid-column-align" + Ke(r, d) + r;
+      if (!ze(r, /flex-|baseline/)) return he + "grid-column-align" + Ke(r, d) + r;
       break;
     case 2592:
     case 3360:
-      return pe + te(r, "template-", "") + r;
+      return he + te(r, "template-", "") + r;
     case 4384:
     case 3616:
       return i && i.some(function(n, _) {
         return d = _, ze(n.props, /grid-\w+-end/);
-      }) ? ~cr(r + (i = i[d].value), "span", 0) ? r : pe + te(r, "-start", "") + r + pe + "grid-row-span:" + (~cr(i, "span", 0) ? ze(i, /\d+/) : +ze(i, /\d+/) - +ze(r, /\d+/)) + ";" : pe + te(r, "-start", "") + r;
+      }) ? ~cr(r + (i = i[d].value), "span", 0) ? r : he + te(r, "-start", "") + r + he + "grid-row-span:" + (~cr(i, "span", 0) ? ze(i, /\d+/) : +ze(i, /\d+/) - +ze(r, /\d+/)) + ";" : he + te(r, "-start", "") + r;
     case 4896:
     case 4128:
       return i && i.some(function(n) {
         return ze(n.props, /grid-\w+-start/);
-      }) ? r : pe + te(te(r, "-end", "-span"), "span ", "") + r;
+      }) ? r : he + te(te(r, "-end", "-span"), "span ", "") + r;
     case 4095:
     case 3583:
     case 4068:
@@ -1032,7 +1032,7 @@ function Kn(r, d, i) {
     case 5152:
     case 5920:
       return te(r, /(.+?):(\d+)(\s*\/\s*(span)?\s*(\d+))?(.*)/, function(n, _, b, k, $, M, z) {
-        return pe + _ + ":" + b + z + (k ? pe + _ + "-span:" + ($ ? M : +M - +b) + z : "") + r;
+        return he + _ + ":" + b + z + (k ? he + _ + "-span:" + ($ ? M : +M - +b) + z : "") + r;
       });
     case 4949:
       if (ke(r, d + 6) === 121)
@@ -1041,9 +1041,9 @@ function Kn(r, d, i) {
     case 6444:
       switch (ke(r, ke(r, 14) === 45 ? 18 : 11)) {
         case 120:
-          return te(r, /(.+:)([^;\s!]+)(;|(\s+)?!.+)?/, "$1" + le + (ke(r, 14) === 45 ? "inline-" : "") + "box$3$1" + le + "$2$3$1" + pe + "$2box$3") + r;
+          return te(r, /(.+:)([^;\s!]+)(;|(\s+)?!.+)?/, "$1" + le + (ke(r, 14) === 45 ? "inline-" : "") + "box$3$1" + le + "$2$3$1" + he + "$2box$3") + r;
         case 100:
-          return te(r, ":", ":" + pe) + r;
+          return te(r, ":", ":" + he) + r;
       }
       break;
     case 5719:
@@ -1106,7 +1106,7 @@ function mt(r, d, i, n) {
                 Xe(Le(r, { props: [te(_, /:(read-\w+)/, ":" + ur + "$1")] })), Xe(Le(r, { props: [_] })), Hr(r, { props: bn(i, n) });
                 break;
               case "::placeholder":
-                Xe(Le(r, { props: [te(_, /:(plac\w+)/, ":" + le + "input-$1")] })), Xe(Le(r, { props: [te(_, /:(plac\w+)/, ":" + ur + "$1")] })), Xe(Le(r, { props: [te(_, /:(plac\w+)/, pe + "input-$1")] })), Xe(Le(r, { props: [_] })), Hr(r, { props: bn(i, n) });
+                Xe(Le(r, { props: [te(_, /:(plac\w+)/, ":" + le + "input-$1")] })), Xe(Le(r, { props: [te(_, /:(plac\w+)/, ":" + ur + "$1")] })), Xe(Le(r, { props: [te(_, /:(plac\w+)/, he + "input-$1")] })), Xe(Le(r, { props: [_] })), Hr(r, { props: bn(i, n) });
                 break;
             }
             return "";
@@ -4654,8 +4654,8 @@ const ou = /* @__PURE__ */ Hn(du), su = (r) => ({ __html: r }), ba = (r, d) => {
     margin: 0;
     padding: 0;
   }
-`, Jr = ({ children: r }) => /* @__PURE__ */ he.jsxs(he.Fragment, { children: [
-  /* @__PURE__ */ he.jsx(iu, {}),
+`, Jr = ({ children: r }) => /* @__PURE__ */ pe.jsxs(pe.Fragment, { children: [
+  /* @__PURE__ */ pe.jsx(iu, {}),
   r
 ] }), cu = ba(eu, uu), ka = Vn((r, d) => {
   const {
@@ -4680,7 +4680,7 @@ const ou = /* @__PURE__ */ Hn(du), su = (r) => ({ __html: r }), ba = (r, d) => {
     ...e
   } = r, t = ya(cu, _), a = va(ae);
   if (typeof i != "string" || ee)
-    return /* @__PURE__ */ he.jsx(Jr, { children: /* @__PURE__ */ he.jsx(
+    return /* @__PURE__ */ pe.jsx(Jr, { children: /* @__PURE__ */ pe.jsx(
       t,
       {
         className: `text-element ${n}`,
@@ -4711,7 +4711,7 @@ const ou = /* @__PURE__ */ Hn(du), su = (r) => ({ __html: r }), ba = (r, d) => {
       return h.replace(w, "");
     }
   }, v = new ou.Converter({ extensions: [s] }).makeHtml(i);
-  return /* @__PURE__ */ he.jsx(Jr, { children: /* @__PURE__ */ he.jsx(
+  return /* @__PURE__ */ pe.jsx(Jr, { children: /* @__PURE__ */ pe.jsx(
     t,
     {
       dangerouslySetInnerHTML: su(v),
@@ -4756,7 +4756,7 @@ const Tu = _e.memo(ka), lu = (r) => {
     $desktop: $,
     ...M
   } = r, z = ya(fu, _);
-  return /* @__PURE__ */ he.jsx(Jr, { children: /* @__PURE__ */ he.jsx(
+  return /* @__PURE__ */ pe.jsx(Jr, { children: /* @__PURE__ */ pe.jsx(
     z,
     {
       className: `flex-element ${n}`,
@@ -5762,14 +5762,14 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
     const S = Vr(c.target.value.length);
     E(S), h(c.target.value), M && M(c);
   };
-  return /* @__PURE__ */ he.jsxs(
+  return /* @__PURE__ */ pe.jsxs(
     hu,
     {
       $alignItems: t ? "center" : "flex-start",
       $gap: "0.5rem",
       "$flex-direction": t ? "row" : "column",
       children: [
-        a && /* @__PURE__ */ he.jsx(
+        a && /* @__PURE__ */ pe.jsx(
           ju,
           {
             className: `text-input-label ${z}`,
@@ -5778,7 +5778,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
             children: b
           }
         ),
-        /* @__PURE__ */ he.jsxs(
+        /* @__PURE__ */ pe.jsxs(
           Eu,
           {
             className: `text-input-container ${z}`,
@@ -5787,7 +5787,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
             $actualColors: p,
             ...s,
             children: [
-              B === Oe.textarea && /* @__PURE__ */ he.jsx(
+              B === Oe.textarea && /* @__PURE__ */ pe.jsx(
                 Pu,
                 {
                   ref: d,
@@ -5805,7 +5805,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                   ...s
                 }
               ),
-              (B === Oe.text || B === Oe.number) && /* @__PURE__ */ he.jsx(
+              (B === Oe.text || B === Oe.number) && /* @__PURE__ */ pe.jsx(
                 Fr,
                 {
                   ref: d,
@@ -5823,8 +5823,8 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                   ...s
                 }
               ),
-              B === Oe.password && /* @__PURE__ */ he.jsxs(he.Fragment, { children: [
-                /* @__PURE__ */ he.jsx(
+              B === Oe.password && /* @__PURE__ */ pe.jsxs(pe.Fragment, { children: [
+                /* @__PURE__ */ pe.jsx(
                   Fr,
                   {
                     ref: d,
@@ -5842,7 +5842,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                     ...s
                   }
                 ),
-                /* @__PURE__ */ he.jsx(
+                /* @__PURE__ */ pe.jsx(
                   Au,
                   {
                     onClick: () => {
@@ -5850,7 +5850,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                     },
                     disabled: $,
                     $actualColors: p,
-                    children: w ? /* @__PURE__ */ he.jsx(
+                    children: w ? /* @__PURE__ */ pe.jsx(
                       "svg",
                       {
                         xmlns: "http://www.w3.org/2000/svg",
@@ -5858,9 +5858,9 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                         fill: p.text,
                         width: "16",
                         height: "16",
-                        children: /* @__PURE__ */ he.jsx("path", { d: "M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zm151 118.3C226 97.7 269.5 80 320 80c65.2 0 118.8 29.6 159.9 67.7C518.4 183.5 545 226 558.6 256c-12.6 28-36.6 66.8-70.9 100.9l-53.8-42.2c9.1-17.6 14.2-37.5 14.2-58.7c0-70.7-57.3-128-128-128c-32.2 0-61.7 11.9-84.2 31.5l-46.1-36.1zM394.9 284.2l-81.5-63.9c4.2-8.5 6.6-18.2 6.6-28.3c0-5.5-.7-10.9-2-16c.7 0 1.3 0 2 0c44.2 0 80 35.8 80 80c0 9.9-1.8 19.4-5.1 28.2zm9.4 130.3C378.8 425.4 350.7 432 320 432c-65.2 0-118.8-29.6-159.9-67.7C121.6 328.5 95 286 81.4 256c8.3-18.4 21.5-41.5 39.4-64.8L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5l-41.9-33zM192 256c0 70.7 57.3 128 128 128c13.3 0 26.1-2 38.2-5.8L302 334c-23.5-5.4-43.1-21.2-53.7-42.3l-56.1-44.2c-.2 2.8-.3 5.6-.3 8.5z" })
+                        children: /* @__PURE__ */ pe.jsx("path", { d: "M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zm151 118.3C226 97.7 269.5 80 320 80c65.2 0 118.8 29.6 159.9 67.7C518.4 183.5 545 226 558.6 256c-12.6 28-36.6 66.8-70.9 100.9l-53.8-42.2c9.1-17.6 14.2-37.5 14.2-58.7c0-70.7-57.3-128-128-128c-32.2 0-61.7 11.9-84.2 31.5l-46.1-36.1zM394.9 284.2l-81.5-63.9c4.2-8.5 6.6-18.2 6.6-28.3c0-5.5-.7-10.9-2-16c.7 0 1.3 0 2 0c44.2 0 80 35.8 80 80c0 9.9-1.8 19.4-5.1 28.2zm9.4 130.3C378.8 425.4 350.7 432 320 432c-65.2 0-118.8-29.6-159.9-67.7C121.6 328.5 95 286 81.4 256c8.3-18.4 21.5-41.5 39.4-64.8L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5l-41.9-33zM192 256c0 70.7 57.3 128 128 128c13.3 0 26.1-2 38.2-5.8L302 334c-23.5-5.4-43.1-21.2-53.7-42.3l-56.1-44.2c-.2 2.8-.3 5.6-.3 8.5z" })
                       }
-                    ) : /* @__PURE__ */ he.jsx(
+                    ) : /* @__PURE__ */ pe.jsx(
                       "svg",
                       {
                         xmlns: "http://www.w3.org/2000/svg",
@@ -5868,13 +5868,13 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                         fill: p.text,
                         width: "16",
                         height: "16",
-                        children: /* @__PURE__ */ he.jsx("path", { d: "M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" })
+                        children: /* @__PURE__ */ pe.jsx("path", { d: "M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" })
                       }
                     )
                   }
                 )
               ] }),
-              B === Oe.masked && /* @__PURE__ */ he.jsx(
+              B === Oe.masked && /* @__PURE__ */ pe.jsx(
                 Cu,
                 {
                   mask: se,
@@ -5884,7 +5884,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                   disabled: $,
                   title: v,
                   ...s,
-                  children: (c) => /* @__PURE__ */ he.jsx(
+                  children: (c) => /* @__PURE__ */ pe.jsx(
                     Fr,
                     {
                       ref: d,
@@ -5900,7 +5900,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
                   )
                 }
               ),
-              B === Oe.textarea && /* @__PURE__ */ he.jsx(
+              B === Oe.textarea && /* @__PURE__ */ pe.jsx(
                 Mu,
                 {
                   className: "counter",
@@ -5917,25 +5917,7 @@ const Cu = /* @__PURE__ */ Hn(Su), Eu = me.div`
   );
 });
 Ru.displayName = "Input";
-const Ou = ({
-  label: r,
-  variant: d = "primary",
-  onClick: i,
-  className: n
-}) => /* @__PURE__ */ he.jsx(
-  "button",
-  {
-    onClick: i,
-    className: `
-        ${n}
-        px-4 py-2 font-semibold rounded-lg transition
-        ${d === "primary" ? "bg-blue-500 text-white hover:bg-blue-600" : "bg-gray-300 text-black hover:bg-gray-400"}
-      `,
-    children: r
-  }
-);
 export {
-  Ou as Button,
   hu as Flex,
   Ru as Input,
   Tu as Text

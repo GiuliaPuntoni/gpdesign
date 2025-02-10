@@ -1,10 +1,9 @@
 import { defineConfig } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react()],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
@@ -19,6 +18,5 @@ export default defineConfig({
         },
       },
     },
-    cssCodeSplit: true, // ✅ Esporta il CSS separatamente
   },
 });
