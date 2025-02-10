@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"), // Punto di ingresso TypeScript
+      entry: path.resolve(__dirname, "src/index.ts"), // Punto di ingresso
       name: "gpdesign",
       fileName: (format) => `gpdesign.${format}.js`,
     },
@@ -17,6 +17,13 @@ export default defineConfig({
         globals: {
           react: "React",
         },
+      },
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      css: {
+        additionalData: `@import "./style.css";`, // Importa il CSS nel build
       },
     },
   },
